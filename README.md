@@ -19,12 +19,14 @@ This project documents the end-to-end installation and configuration of osTicket
 - Windows 11</b> (21H2)
 
 <h2>✅ Prerequisites</h2>
+Before beginning the installation, the following must be in place:
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- An active **Azure subscription**
+- An Azure **Resource Group** and **Virtual Network**
+- An Azure VM running **Windows Server 2019** (minimum: 2 vCPUs, 8 GB RAM recommended)
+- RDP access to the VM
+- osTicket-Installation-Files (https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD)
+
 
 <h2>Installation Steps</h2>
 
