@@ -14,7 +14,7 @@ This project documents the end-to-end installation and configuration of osTicket
 - MySQL 5.5.62
 - HeidiSQL
 - osTicket v1.15.8
-<h2>Operating Systems Used </h2>
+<h2>🪟 Operating Systems Used </h2>
 
 - Windows 10</b> (21H2)
 
