@@ -16,7 +16,7 @@ This project documents the end-to-end installation and configuration of osTicket
 - osTicket v1.15.8
 <h2>🪟 Operating Systems Used </h2>
 
-- Windows 10</b> (21H2)
+- Windows 11</b> (21H2)
 
 <h2>List of Prerequisites</h2>
 
