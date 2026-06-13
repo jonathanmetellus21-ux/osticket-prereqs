@@ -18,7 +18,7 @@ This project documents the end-to-end installation and configuration of osTicket
 
 - Windows 11</b> (21H2)
 
-<h2>List of Prerequisites</h2>
+<h2>✅ Prerequisites</h2>
 
 - Item 1
 - Item 2
