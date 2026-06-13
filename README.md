@@ -7,7 +7,7 @@ This project documents the end-to-end installation and configuration of **osTick
 
 <h2>🖥️ Environments and Technologies Used</h2>
 
-- Microsoft Azure** (Virtual Machines / Compute)
+- Microsoft Azure(Virtual Machines / Computer)
 - Remote Desktop Protocol (RDP)
 - Internet Information Services (IIS)
 - PHP 7.3.8
