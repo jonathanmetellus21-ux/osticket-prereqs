@@ -31,7 +31,7 @@ Before beginning the installation, the following must be in place:
 <h2>Installation Steps</h2>
 
 <p>
-<img src="<img width="1919" height="1079" alt="Screenshot 2026-06-09 174330" src="<img width="1919" height="1079" alt="Screenshot 2026-06-09 174330" src="https://github.com/user-attachments/assets/b49d68a1-6038-4b42-bb57-1b97ea46939c" />
+<img src="<img width="1919" height="1079" alt="Screenshot 2026-06-09 174330" src="<img width="1919" height="1079" alt="Screenshot 2026-06-09 174330" src="https://imgur.com/a/2qpUVfH" />
 " />
 " height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
