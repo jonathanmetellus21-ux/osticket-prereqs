@@ -4,7 +4,7 @@
 
 <h1 align="center">osTicket — Prerequisites and Installation</h1>
 
-This project documents the end-to-end installation and configuration of <b>osTicket</b>, an open-source help desk ticketing system, hosted on a Microsoft Azure Virtual Machine running Windows Server 2019. It covers all prerequisite software installation (IIS, PHP, MySQL), the osTicket setup wizard, and post-install configuration — simulating a real-world IT help desk deployment.
+This project documents the end-to-end installation and configuration of <b>osTicket</b>, an open-source help desk ticketing system, hosted on a Microsoft Azure Virtual Machine running <b>Windows 11 Pro</b>. It covers all prerequisite software installation (IIS, PHP, MySQL), the osTicket setup wizard, and post-install configuration — simulating a real-world IT help desk deployment.
 
 <h2>🖥️ Environments and Technologies Used</h2>
 
@@ -18,8 +18,8 @@ This project documents the end-to-end installation and configuration of <b>osTic
 
 <h2>🪟 Operating Systems Used</h2>
 
-- Windows 10 (local — RDP client)
-- Windows Server 2019 (Azure VM — osTicket host)
+- Windows 11 Pro (local — RDP client)
+- Windows 11 Pro, version 25H2 (Azure VM — osTicket host)
 
 <h2>✅ Prerequisites</h2>
 
@@ -27,7 +27,7 @@ Before beginning the installation, the following must be in place:
 
 - An active <b>Azure subscription</b>
 - An Azure <b>Resource Group</b> and <b>Virtual Network</b>
-- An Azure VM running <b>Windows Server 2019</b> (minimum: 2 vCPUs, 8 GB RAM)
+- An Azure VM running <b>Windows 11 Pro, version 25H2</b> (Standard FX4mds v2 — 4 vCPUs, 84 GiB RAM)
 - RDP access to the VM
 - <a href="https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD">osTicket Installation Files (Google Drive)</a>
 
@@ -35,10 +35,10 @@ Before beginning the installation, the following must be in place:
 
 <h3>Step 1 — Create the Azure Virtual Machine</h3>
 <p>
-<img src="YOUR_SCREENSHOT_URL_HERE" height="80%" width="80%" alt="Azure VM Creation"/>
+<img src="https://i.imgur.com/GtPehTT.png" height="80%" width="80%" alt="Azure VM Creation"/>
 </p>
 <p>
-In the Azure Portal, navigate to <b>Virtual Machines → Create → Azure Virtual Machine</b>. Create a new Resource Group named <b>RG-osTicket</b> and configure the VM with Windows Server 2019 Datacenter, Standard_D2s_v3 size (2 vCPUs, 8 GiB RAM). Under <b>Inbound Port Rules</b>, allow <b>RDP (3389)</b>. Click <b>Review + Create</b> → <b>Create</b> and wait for deployment to complete. Once deployed, connect via RDP using the VM's Public IP address.
+In the Azure Portal, navigate to <b>Virtual Machines → Create → Azure Virtual Machine</b>. Create a new Resource Group named <b>osTicket</b> and configure the VM with <b>Windows 11 Pro, version 25H2 - Gen2</b>, Standard FX4mds v2 (4 vCPUs, 84 GiB RAM). Under <b>Inbound Port Rules</b>, allow <b>RDP (3389)</b>. Click <b>Review + Create</b> → <b>Create</b> and wait for deployment to complete. Once deployed, connect via RDP using the VM's Public IP address.
 </p>
 <br />
 
