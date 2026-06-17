@@ -44,10 +44,11 @@ In the Azure Portal, navigate to <b>Virtual Machines → Create → Azure Virtua
 
 <h3>Step 2 — Enable IIS with CGI</h3>
 <p>
-<img src="YOUR_SCREENSHOT_URL_HERE" height="80%" width="80%" alt="IIS with CGI enabled"/>
+<img src="https://i.imgur.com/uxbGqxY.png" height="80%" width="80%" alt="IIS with CGI enabled"/>
 </p>
 <p>
-Inside the VM, open <b>Control Panel → Programs → Turn Windows Features On or Off</b>. Enable <b>Internet Information Services → World Wide Web Services → Application Development Features → CGI</b>. Also ensure all <b>Common HTTP Features</b> are checked. Click OK and allow installation to complete. Verify IIS is running by opening a browser on the VM and navigating to <b>127.0.0.1</b> — the default IIS welcome page should appear.
+copy Google Drive 
+osTicket-Installation-Files Inside the VM go to edge and paste link into edge address bar. download and extract to the desktop, open <b>Control Panel → Programs → Turn Windows Features On or Off</b>. Enable <b>Internet Information Services → World Wide Web Services → Application Development Features → CGI</b>. Also ensure all <b>Common HTTP Features</b> are checked. Click OK and allow installation to complete. Verify IIS is running by opening a browser on the VM and navigating to <b>127.0.0.1</b> — the default IIS welcome page should appear.
 </p>
 <br />
 
