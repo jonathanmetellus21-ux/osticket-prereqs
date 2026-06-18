@@ -42,13 +42,12 @@ In the Azure Portal, navigate to <b>Virtual Machines → Create → Azure Virtua
 </p>
 <br />
 
-<h3>Step 2 — Enable IIS with CGI</h3>
+<h3>Step 2 — Download Installation Files and Enable IIS with CGI</h3>
 <p>
 <img src="https://i.imgur.com/uxbGqxY.png" height="80%" width="80%" alt="IIS with CGI enabled"/>
 </p>
 <p>
-copy Google Drive 
-osTicket-Installation-Files Inside the VM go to edge and paste link into edge address bar. download and extract to the desktop, open <b>Control Panel → Programs → Turn Windows Features On or Off</b>. Enable <b>Internet Information Services → World Wide Web Services → Application Development Features → CGI</b>. Also ensure all <b>Common HTTP Features</b> are checked. Click OK and allow installation to complete. Verify IIS is running by opening a browser on the VM and navigating to <b>127.0.0.1</b> — the default IIS welcome page should appear.
+Inside the VM, open <b>Microsoft Edge</b> and paste the osTicket Installation Files Google Drive link into the address bar. Download and extract the zip to the Desktop. Next, open <b>Control Panel → Programs → Turn Windows Features On or Off</b>. Enable <b>Internet Information Services → World Wide Web Services → Application Development Features → CGI</b>. Also ensure all <b>Common HTTP Features</b> are checked. Click OK and allow installation to complete. Verify IIS is running by navigating to <b>127.0.0.1</b> in the browser — the default IIS welcome page should appear.
 </p>
 <br />
 
@@ -57,13 +56,13 @@ osTicket-Installation-Files Inside the VM go to edge and paste link into edge ad
 <img src="https://i.imgur.com/hYgE4Hi.png" height="80%" width="80%" alt="PHP Manager in IIS"/>
 </p>
 <p>
-From the installation files, install <b>PHP Manager for IIS</b> and the <b>install Rewrite </b>. Next, create the directory <b>C:\PHP</b>, by clicking on windows(C:) then right clicking and creating a folder called PHP then extract the PHP 7.3.8 zip into that folder. Also install the <b>VC++ Redistributable</b> (required by PHP). Open <b>IIS Manager → PHP Manager → Register New PHP Version</b> and point it to <b>C:\PHP\php-cgi.exe</b>. Restart IIS (Stop → Start) to apply the changes.
+From the installation files, install <b>PHP Manager for IIS</b> and the <b>URL Rewrite Module</b>. Next, create the directory <b>C:\PHP</b> by opening Windows (C:) drive, right-clicking, and creating a new folder named <b>PHP</b>. Extract the PHP 7.3.8 zip into that folder. Also install the <b>VC++ Redistributable</b> (required by PHP). Open <b>IIS Manager → PHP Manager → Register New PHP Version</b> and point it to <b>C:\PHP\php-cgi.exe</b>. Restart IIS (Stop → Start) to apply the changes.
 </p>
 <br />
 
 <h3>Step 4 — Install MySQL 5.5.62</h3>
 <p>
-<img src="https://imgur.com/1dbb0bbc-43d1-470c-a593-e5cbe6e74d62" height="80%" width="80%" alt="MySQL installation"/>
+<img src="https://i.imgur.com/H4C8QuC.jpg" height="80%" width="80%" alt="MySQL installation"/>
 </p>
 <p>
 Run the MySQL 5.5.62 installer and select <b>Typical Setup</b>. After installation, launch the <b>MySQL Configuration Wizard</b> and choose <b>Standard Configuration</b>. Set a root password (save this — it will be needed during the osTicket setup wizard). MySQL will run as a Windows service automatically after this step.
@@ -75,17 +74,16 @@ Run the MySQL 5.5.62 installer and select <b>Typical Setup</b>. After installati
 <img src="https://i.imgur.com/SgSNSbx.png" height="80%" width="80%" alt="osTicket files copied to wwwroot"/>
 </p>
 <p>
-Extract the osTicket zip from the installation files. Copy the <b>upload</b> folder into <b>C:\inetpub\wwwroot</b> and rename it to <b>osTicket</b>. Reload IIS, then in IIS Manager navigate to <b>Sites → Default Web Site → osTicket</b> and click <b>Browse *:80</b> on the right panel. The osTicket installer should open in the browser — note any extensions shown as disabled (red X).
+Extract the osTicket zip from the installation files. Copy the <b>upload</b> folder into <b>C:\inetpub\wwwroot</b> and rename it to <b>osTicket</b>. Reload IIS, then in IIS Manager navigate to <b>Sites → Default Web Site → osTicket</b> and click <b>Browse *:80</b> on the right panel. The osTicket installer will open in the browser — some recommended extensions will show as disabled (red X).
 </p>
 <br />
 
 <h3>Step 6 — Enable Required PHP Extensions</h3>
 <p>
-<img src="<img width="1919" height="1078" alt="image" src="https://i.imgur.com/J0NnK9E.png" />
-" height="80%" width="80%" alt="PHP extensions enabled in IIS"/>
+<img src="https://i.imgur.com/J0NnK9E.png" height="80%" width="80%" alt="PHP extensions enabled in IIS"/>
 </p>
 <p>
-In IIS Manager, go to <b>Sites → Default Web Site → osTicket → PHP Manager → Enable or Disable an Extension</b>. Enable the following three extensions: <b>php_imap.dll</b>, <b>php_intl.dll</b>, and <b>php_opcache.dll</b>. Refresh the osTicket installer page in the browser — the previously red checkmarks should now appear green. APCu extension and Zend OPcache Extension are not required.
+In IIS Manager, go to <b>Sites → Default Web Site → osTicket → PHP Manager → Enable or Disable an Extension</b>. Enable the following three extensions: <b>php_imap.dll</b>, <b>php_intl.dll</b>, and <b>php_opcache.dll</b>. Refresh the osTicket installer page in the browser — the previously red checkmarks should now appear green. Note: APCu Extension and Zend OPcache Extension are not required and can be left disabled.
 </p>
 <br />
 
@@ -112,6 +110,6 @@ Open <b>HeidiSQL</b>, create a new session using the MySQL root credentials, and
 <img src="https://i.imgur.com/JnCsVG7.png" height="80%" width="80%" alt="osTicket admin panel"/>
 </p>
 <p>
-Once the "Congratulations!" page appears, perform two cleanup tasks, which are optional : (1) <b>Delete</b> the setup folder at <b>C:\inetpub\wwwroot\osTicket\setup</b>. (2) Set <b>ost-config.php</b> back to <b>Read Only</b> — right-click → Properties → Security → Advanced → change Everyone permission to <b>Read</b> only. The help desk is now live. Access the end-user portal at <b>http://localhost/osTicket/</b> and the staff/admin panel at <b>http://localhost/osTicket/scp/login.php</b>.
+Once the "Congratulations!" page appears, perform two cleanup tasks: (1) <b>Delete</b> the setup folder at <b>C:\inetpub\wwwroot\osTicket\setup</b>. (2) Set <b>ost-config.php</b> back to <b>Read Only</b> — right-click → Properties → Security → Advanced → change Everyone permission to <b>Read</b> only. The help desk is now live. Access the end-user portal at <b>http://localhost/osTicket/</b> and the staff/admin panel at <b>http://localhost/osTicket/scp/login.php</b>.
 </p>
 <br />
