@@ -54,10 +54,10 @@ osTicket-Installation-Files Inside the VM go to edge and paste link into edge ad
 
 <h3>Step 3 — Install PHP Manager, URL Rewrite, and PHP 7.3.8</h3>
 <p>
-<img src="YOUR_SCREENSHOT_URL_HERE" height="80%" width="80%" alt="PHP Manager in IIS"/>
+<img src="https://i.imgur.com/hYgE4Hi.png" height="80%" width="80%" alt="PHP Manager in IIS"/>
 </p>
 <p>
-From the installation files, install <b>PHP Manager for IIS</b> and the <b>install Rewrite Module</b>. Next, create the directory <b>C:\PHP</b>, by clicking on windows(C:) then right clicking and creating a folder call PHP then extract the PHP 7.3.8 zip into that folder. Also install the <b>VC++ Redistributable</b> (required by PHP). Open <b>IIS Manager → PHP Manager → Register New PHP Version</b> and point it to <b>C:\PHP\php-cgi.exe</b>. Restart IIS (Stop → Start) to apply the changes.
+From the installation files, install <b>PHP Manager for IIS</b> and the <b>install Rewrite Module</b>. Next, create the directory <b>C:\PHP</b>, by clicking on windows(C:) then right clicking and creating a folder called PHP then extract the PHP 7.3.8 zip into that folder. Also install the <b>VC++ Redistributable</b> (required by PHP). Open <b>IIS Manager → PHP Manager → Register New PHP Version</b> and point it to <b>C:\PHP\php-cgi.exe</b>. Restart IIS (Stop → Start) to apply the changes.
 </p>
 <br />
 
