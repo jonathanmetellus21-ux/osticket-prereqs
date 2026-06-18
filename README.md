@@ -63,7 +63,7 @@ From the installation files, install <b>PHP Manager for IIS</b> and the <b>insta
 
 <h3>Step 4 — Install MySQL 5.5.62</h3>
 <p>
-<img src="YOUR_SCREENSHOT_URL_HERE" height="80%" width="80%" alt="MySQL installation"/>
+<img src="https://imgur.com/1dbb0bbc-43d1-470c-a593-e5cbe6e74d62" height="80%" width="80%" alt="MySQL installation"/>
 </p>
 <p>
 Run the MySQL 5.5.62 installer and select <b>Typical Setup</b>. After installation, launch the <b>MySQL Configuration Wizard</b> and choose <b>Standard Configuration</b>. Set a root password (save this — it will be needed during the osTicket setup wizard). MySQL will run as a Windows service automatically after this step.
