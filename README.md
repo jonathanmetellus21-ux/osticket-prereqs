@@ -57,7 +57,7 @@ osTicket-Installation-Files Inside the VM go to edge and paste link into edge ad
 <img src="https://i.imgur.com/hYgE4Hi.png" height="80%" width="80%" alt="PHP Manager in IIS"/>
 </p>
 <p>
-From the installation files, install <b>PHP Manager for IIS</b> and the <b>install Rewrite Module</b>. Next, create the directory <b>C:\PHP</b>, by clicking on windows(C:) then right clicking and creating a folder called PHP then extract the PHP 7.3.8 zip into that folder. Also install the <b>VC++ Redistributable</b> (required by PHP). Open <b>IIS Manager → PHP Manager → Register New PHP Version</b> and point it to <b>C:\PHP\php-cgi.exe</b>. Restart IIS (Stop → Start) to apply the changes.
+From the installation files, install <b>PHP Manager for IIS</b> and the <b>install Rewrite </b>. Next, create the directory <b>C:\PHP</b>, by clicking on windows(C:) then right clicking and creating a folder called PHP then extract the PHP 7.3.8 zip into that folder. Also install the <b>VC++ Redistributable</b> (required by PHP). Open <b>IIS Manager → PHP Manager → Register New PHP Version</b> and point it to <b>C:\PHP\php-cgi.exe</b>. Restart IIS (Stop → Start) to apply the changes.
 </p>
 <br />
 
@@ -72,7 +72,7 @@ Run the MySQL 5.5.62 installer and select <b>Typical Setup</b>. After installati
 
 <h3>Step 5 — Install osTicket v1.15.8</h3>
 <p>
-<img src="YOUR_SCREENSHOT_URL_HERE" height="80%" width="80%" alt="osTicket files copied to wwwroot"/>
+<img src="https://i.imgur.com/SgSNSbx.png" height="80%" width="80%" alt="osTicket files copied to wwwroot"/>
 </p>
 <p>
 Extract the osTicket zip from the installation files. Copy the <b>upload</b> folder into <b>C:\inetpub\wwwroot</b> and rename it to <b>osTicket</b>. Reload IIS, then in IIS Manager navigate to <b>Sites → Default Web Site → osTicket</b> and click <b>Browse *:80</b> on the right panel. The osTicket installer should open in the browser — note any extensions shown as disabled (red X).
@@ -81,10 +81,11 @@ Extract the osTicket zip from the installation files. Copy the <b>upload</b> fol
 
 <h3>Step 6 — Enable Required PHP Extensions</h3>
 <p>
-<img src="YOUR_SCREENSHOT_URL_HERE" height="80%" width="80%" alt="PHP extensions enabled in IIS"/>
+<img src="<img width="1919" height="1078" alt="image" src="https://i.imgur.com/J0NnK9E.png" />
+" height="80%" width="80%" alt="PHP extensions enabled in IIS"/>
 </p>
 <p>
-In IIS Manager, go to <b>Sites → Default Web Site → osTicket → PHP Manager → Enable or Disable an Extension</b>. Enable the following three extensions: <b>php_imap.dll</b>, <b>php_intl.dll</b>, and <b>php_opcache.dll</b>. Refresh the osTicket installer page in the browser — the previously red checkmarks should now appear green.
+In IIS Manager, go to <b>Sites → Default Web Site → osTicket → PHP Manager → Enable or Disable an Extension</b>. Enable the following three extensions: <b>php_imap.dll</b>, <b>php_intl.dll</b>, and <b>php_opcache.dll</b>. Refresh the osTicket installer page in the browser — the previously red checkmarks should now appear green. APCu extension and Zend OPcache Extension are not required.
 </p>
 <br />
 
