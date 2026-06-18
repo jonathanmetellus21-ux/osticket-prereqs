@@ -91,7 +91,7 @@ In IIS Manager, go to <b>Sites → Default Web Site → osTicket → PHP Manager
 
 <h3>Step 7 — Rename Config File and Set Permissions</h3>
 <p>
-<img src="YOUR_SCREENSHOT_URL_HERE" height="80%" width="80%" alt="ost-config.php permissions"/>
+<img src="https://i.imgur.com/VFpNUvH.png" height="80%" width="80%" alt="ost-config.php permissions"/>
 </p>
 <p>
 Navigate to <b>C:\inetpub\wwwroot\osTicket\include\</b> and rename <b>ost-sampleconfig.php</b> to <b>ost-config.php</b>. Right-click the file → <b>Properties → Security → Advanced</b>. Click <b>Disable Inheritance → Remove all inherited permissions</b>, then add <b>Everyone</b> with <b>Full Control</b> (this is temporary for the setup wizard only — it will be locked down afterward).
@@ -100,7 +100,7 @@ Navigate to <b>C:\inetpub\wwwroot\osTicket\include\</b> and rename <b>ost-sample
 
 <h3>Step 8 — Complete the Setup Wizard and Create the Database</h3>
 <p>
-<img src="YOUR_SCREENSHOT_URL_HERE" height="80%" width="80%" alt="osTicket setup wizard"/>
+<img src="https://i.imgur.com/sqizNoV.png" height="80%" width="80%" alt="osTicket setup wizard"/>
 </p>
 <p>
 Open <b>HeidiSQL</b>, create a new session using the MySQL root credentials, and connect. Create a new database named <b>osTicket</b>. Back in the browser, continue the osTicket setup wizard — fill in your Help Desk Name, default email, and admin credentials. Under <b>Database Settings</b>, enter <b>osTicket</b> as the database name along with the MySQL root username and password. Click <b>Install Now!</b>
@@ -109,9 +109,9 @@ Open <b>HeidiSQL</b>, create a new session using the MySQL root credentials, and
 
 <h3>Step 9 — Post-Installation Cleanup</h3>
 <p>
-<img src="YOUR_SCREENSHOT_URL_HERE" height="80%" width="80%" alt="osTicket admin panel"/>
+<img src="https://i.imgur.com/JnCsVG7.png" height="80%" width="80%" alt="osTicket admin panel"/>
 </p>
 <p>
-Once the "Congratulations!" page appears, perform two cleanup tasks: (1) <b>Delete</b> the setup folder at <b>C:\inetpub\wwwroot\osTicket\setup</b>. (2) Set <b>ost-config.php</b> back to <b>Read Only</b> — right-click → Properties → Security → Advanced → change Everyone permission to <b>Read</b> only. The help desk is now live. Access the end-user portal at <b>http://&lt;VM-IP&gt;/osTicket</b> and the staff/admin panel at <b>http://&lt;VM-IP&gt;/osTicket/scp/login.php</b>.
+Once the "Congratulations!" page appears, perform two cleanup tasks, which are optional : (1) <b>Delete</b> the setup folder at <b>C:\inetpub\wwwroot\osTicket\setup</b>. (2) Set <b>ost-config.php</b> back to <b>Read Only</b> — right-click → Properties → Security → Advanced → change Everyone permission to <b>Read</b> only. The help desk is now live. Access the end-user portal at <b>http://localhost/osTicket/</b> and the staff/admin panel at <b>http://localhost/osTicket/scp/login.php</b>.
 </p>
 <br />
